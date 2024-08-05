@@ -1,215 +1,71 @@
+```html
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portofolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Script HTML Bucin</title>
+
+    <style>
+
+        body { background-color: #ffe6e6; font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+
+        .heart { color: red; font-size: 50px; }
+
+        .message { font-size: 24px; margin-top: 20px; }
+
+        .button { background-color: #ff6666; border: none; color: white; padding: 15px 32px; font-size: 16px; margin: 20px 2px; cursor: pointer; border-radius: 8px; }
+
+    </style>
+
 </head>
+
 <body>
 
-    <header class="header">
-        <a href="#home" class="logo"> 
-            Amelia<span> Morgan </span>
-        </a>
+    <h1>Halaman Bucin</h1>
 
-        <i class='bx bx-menu' id="menu-icon"></i> 
-        
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <div class="heart">&#10084;&#65039;</div>
 
-        <button class="gradient-btn">Contact Me</button>
+    <div class="message">Klik tombol untuk pesan cinta!</div>
 
-    </header>
+    <button class="button" onclick="showMessage()">Klik Aku</button>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1> Hi, It's <span>Amelia</span></h1>
-            <h3>
-                I'm a <span>Web Developer</span>
-            </h3>
-            <P>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </P>
+    <div id="loveMessage"></div>
 
-            <div class="social-icons">
-                <a href="#">
-                    <i class="bx bxl-github"></i>
-                </a>
+    <script>
 
-                <a href="#">
-                    <i class="bx bxl-linkedin-square"></i>
-                </a>
+        function showMessage() {
 
-                <a href="#">
-                    <i class="bx bxl-instagram-alt"></i>
-                </a>
+            const messages = [
 
-                <a href="#">
-                    <i class="bx bxl-twitter"></i>
-                </a>
-            </div>
+                "Aku sayang kamu lebih dari kata-kata bisa ungkapkan.",
 
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact"class="btn">Contact</a>
-            </div>
-        </div>
+                "Kamu adalah alasan aku tersenyum setiap hari.",
 
-            <div class="home-img">
-                <img src="image.jpg" alt="">
-            </div>
+                "Hidupku menjadi lebih indah sejak ada kamu.",
 
-        </section>
+                "Kamu adalah bintang di langitku.",
 
-        <section class="about" id="about">
+                "Cintaku padamu tak akan pernah pudar."
 
-            <div class="about-img">
-                <img src="image.jpg" alt="">
-            </div>
+            ];
 
-            <div class="about-content">
-                <h2>About <span> Me</span></h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
-        </section>
+            document.getElementById("loveMessage").innerHTML = `<p>${randomMessage}</p>`;
 
-        <section class="services" id="services">
+        }
 
-            <h2 class="heading">Services</h2>
-
-
-            <div class="service-container">
-                <div class="service-box">
-                    <div class="service-info">
-                        <i class="bx bxl-figma"></i>
-                        <h4> UI / UX Design</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the</p>
-                    </div>
-                </div>
-
-                <div class="service-box">
-                    <div class="service-info">
-                        <i class="bx bx-code"></i>
-                        <h4>Frontend Development</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the</p>
-                    </div>
-                </div>
-
-                <div class="service-box">
-                    <div class="service-info">
-                        <i class="bx bx-code-curly"></i>
-                        <h4>Backend Development</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects" id="projects">
-
-            <h2 class="heading">Projects</h2>
-            
-                <div class="projects-box">
-                    
-                    <div class="project-card">
-                        <img src="image.jpg" alt="">
-
-                        <h3>Project 1</h3>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis earum hic molestias rerum commodi, autem ipsa maxime quam aspernatur eligendi magnam expedita impedit voluptas praesentium fugiat deleniti officiis quaerat sed.</p>
-                        <div class="btn">Review Project</div>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="image.jpg" alt="">
-
-                        <h3>Project 2</h3>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis earum hic molestias rerum commodi, autem ipsa maxime quam aspernatur eligendi magnam expedita impedit voluptas praesentium fugiat deleniti officiis quaerat sed.</p>
-                        <div class="btn">Review Project</div>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="image.jpg" alt="">
-
-                        <h3>Project 3</h3>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis earum hic molestias rerum commodi, autem ipsa maxime quam aspernatur eligendi magnam expedita impedit voluptas praesentium fugiat deleniti officiis quaerat sed.</p>
-                        <div class="btn">Review Project</div>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="image.jpg" alt="">
-
-                        <h3>Project 4</h3>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis earum hic molestias rerum commodi, autem ipsa maxime quam aspernatur eligendi magnam expedita impedit voluptas praesentium fugiat deleniti officiis quaerat sed.</p>
-                        <div class="btn">Review Project</div>
-                    </div>
-
-
-        </section>
-
-        <section class="contact" id="contact">
-           <h2 class="heading">Contact<span>Me</span></h2> 
-
-           <form action="#">
-
-                <div class="input-group">
-                    <div class="input-box"></div>
-                        <input type="text"
-                        placeholder="Full Name">
-                        <input type="email"
-                        placeholder="Email">
-
-                    <div class="input-box">
-                        <input type="number"
-                        placeholder="Phone Number">
-                        <input type="text"
-                        placeholder="Subject">
-                    </div>
-                </div>
-
-                <div class="input-group-2">
-                    <textarea name="" id=""
-                    placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send Message" class="btn">
-                </div>
-
-
-           </form>
-        </section>
-
-        <footer class="footer">
-            <div class="social-icons">
-                <a href="#">
-                    <i class="bx bxl-github"></i>
-                </a>
-
-                <a href="#">
-                    <i class="bx bxl-linkedin-square"></i>
-                </a>
-
-                <a href="#">
-                    <i class="bx bxl-instagram-alt"></i>
-                </a>
-
-                <a href="#">
-                    <i class="bx bxl-twitter"></i>
-                </a>
-            </div>
-        </footer>
-
-
-    <script src="script.js"></script>
+    </script>
 
 </body>
+
 </html>
+
+```
